@@ -3,6 +3,8 @@ export default function Home() {
         <div>
         <h1>Welcome to my Projects Page</h1>
         <p>This is the home page of our application.</p>
+
+        
         </div>
     );
     }

@@ -1,0 +1,63 @@
+/* Basic container styling */
+.weather_container {
+
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+}
+
+.weather_container_h2 {
+  font-size: 54px;
+  margin-bottom: 100px;
+  margin-top: 2%;
+  text-align: center;
+  color: bisque;
+}
+
+.weather_container_h3 {
+  font-size: 30px;
+}
+
+.weather_container_p {
+  font-size: 26px;
+  text-align: center;
+  margin: 20px;
+  color: hsl(0, 0%, 96%);
+}
+
+.weather_container_img {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.weather_container_temperature {
+  font-size: 56px;
+  font-weight: bold;
+  color: #ff7e00;
+  /* Warm color for temperature */
+}
+
+.weather_container_condition {
+  font-size: 28px;
+  color: #777;
+}
+
+.error_message {
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.loading_message {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #555;
+}
