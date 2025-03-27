@@ -2,94 +2,41 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  return (
+
+    <div className={styles.page}>
+      <div className={styles.welcome_container}>
+        <h1>Welcome to Rony Levi Website</h1>
+        <p>I'm <strong>Rony Levi</strong>, a passionate developer who loves creating stunning websites with
+          HTML, CSS, React, Java and JavaScript.</p>
+        <p>Explore my portfolio, learn more about me, or get in touch!</p>
+        <p>Feel free to reach out if you have any questions or want to collaborate on a project.</p>
+        <p>Let's connect and create something amazing together!</p>
+        <p>Check out my social media profiles:</p>
+
+
+
+
+
+
+
+      </div>
+
+      <div id="bio" className={styles.bio}>
+        <img src="https://media.licdn.com/dms/image/v2/C5103AQEH8yhUHUEK5A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516556980660?e=1748476800&v=beta&t=yy6ygEp2SeEXav7R2mlc_Ny1CIxE30E0a7A4mpRjZ20" alt="Rony Levi" className={styles.img} />
+        <h2>About Me</h2>
+        <p>I started my career as a QA engineer, tested Web, Mobile, and Saas applications, for the last few years, I
+          have built and led QA departments.</p>
+        <p>My role encompasses establishing robust quality assurance protocols, (QA) infrastructures, automation,
+          reports, and managing a talented team of over 50
+          professionals worldwide. </p>
+        <p>I have a lot of experience with CD/CD processes, work methods, management skills.</p>
+      </div>
     </div>
+
+
+
+
   );
 }

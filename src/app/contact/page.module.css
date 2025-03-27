@@ -1,0 +1,30 @@
+.contact_me_container {
+    text-align: center;
+    margin-top: calc(25% - 5%);
+  }
+  
+  .contact_me_container h2 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    margin-top: 5%;
+  }
+  
+  .contact_icons {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .icon {
+    color: #828181;
+    transition: transform 0.3s ease, color 0.3s ease;
+    
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    color: #0073b1;  /* Change color on hover (LinkedIn's blue as an example) */
+  }
+  

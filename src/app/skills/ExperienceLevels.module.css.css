@@ -1,0 +1,47 @@
+/* Container */
+.container {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background: #1e1e1e;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Skill Item */
+.skill {
+  margin-bottom: 15px;
+}
+
+/* Skill Name */
+.skillName {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Progress Bar */
+.progressBar {
+  width: 100%;
+  height: 12px;
+  background-color: #444;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animated Progress Fill */
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #30b1e4, #1f77d3);
+  transition: width 1.5s ease-in-out;
+}
