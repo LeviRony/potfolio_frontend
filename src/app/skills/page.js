@@ -28,13 +28,15 @@ const skills = [
   { skill: "Google Cloud Platform", level: 75 },
   { skill: "Selenium", level: 100 },
   { skill: "Appium", level: 100 },
+  { skill: "AI", level: 90 },
+
 
 ];
 
 const Skills = () => {
   return (
     <div className={styles.title}>
-      <h2>My Skills</h2>
+      <h2>~ My Skills Level ~</h2>
     
     <div className={styles.skills_container}>
       {skills.map((item, index) => (
