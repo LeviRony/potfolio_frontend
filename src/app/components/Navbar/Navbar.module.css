@@ -40,3 +40,10 @@
     min-height: calc(100vh - 64px);
     /* Adjust height to account for the navbar */
 }
+
+.link {
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}

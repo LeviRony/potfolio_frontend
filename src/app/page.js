@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { FaWhatsapp, FaLinkedin, FaPhone, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 export default function Home() {
 
@@ -15,7 +16,49 @@ export default function Home() {
         <p>Let's connect and create something amazing together!</p>
         <p>Check out my social media profiles:</p>
 
-
+        <div className={styles.contact_icons}>
+        {/* Phone */}
+        <a
+          href="tel:+972544273287" // phone number
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact via Phone"
+        >
+          <FaPhone size={80} className={styles.FaPhone_icon} />
+        </a>
+        <a
+          href="https://wa.me/972544273287"  //  WhatsApp link
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact via WhatsApp"
+        >
+          <FaWhatsapp size={80} className={styles.FaWhatsapp_icon} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rony-levi/"  // LinkedIn profile
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact via LinkedIn"
+        >
+          <FaLinkedin size={80} className={styles.FaLinkedin_icon} />
+        </a>
+        <a
+          href="https://github.com/LeviRony"  // GitHub profile
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit my GitHub"
+        >
+          <FaGithub size={80} className={styles.FaGithub_icon} />
+        </a>
+        <a
+          href="mailto:ronylevi99@gmail.com"  // email address
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact via Email"
+        >
+          <FaEnvelope size={80} className={styles.FaEnvelope_icon} />
+        </a>
+      </div>
 
 
 
@@ -24,7 +67,7 @@ export default function Home() {
       </div>
 
       <div id="bio" className={styles.bio}>
-        <img src="https://media.licdn.com/dms/image/v2/C5103AQEH8yhUHUEK5A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516556980660?e=1748476800&v=beta&t=yy6ygEp2SeEXav7R2mlc_Ny1CIxE30E0a7A4mpRjZ20" alt="Rony Levi" className={styles.img} />
+        <img src="/images/RonyL.jpeg" alt="Rony Levi" className={styles.img} />
         <h2>About Me</h2>
         <p>I started my career as a QA engineer, tested Web, Mobile, and Saas applications, for the last few years, I
           have built and led QA departments.</p>

@@ -7,7 +7,7 @@ import axios from "axios";
 export default function Navbar() {
     const [weatherData, setWeatherData] = useState(null);
     const [error, setError] = useState(null);
-
+    
     // Get user's location and fetch weather data
     useEffect(() => {
         const fetchWeather = async (lat, lon) => {
