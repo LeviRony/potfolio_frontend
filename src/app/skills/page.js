@@ -22,27 +22,36 @@ const skills = [
   { skill: "Agile", level: 100 },
   { skill: "Scrum", level: 100 },
   { skill: "JIRA", level: 100 },
+  { skill: "Confluence", level: 100 },
+  { skill: "Bitbucket", level: 85 },
   { skill: "Monday.com", level: 60 },
+  { skill: "Zendesk", level: 90 },
+  { skill: "JFrog", level: 80 },
+  { skill: "App Center", level: 90 },
+  { skill: "Browser Stack", level: 90 },
   { skill: "Slack", level: 100 },
   { skill: "Auth0", level: 85 },
+  { skill: "ADB", level: 85 },
+  { skill: "Postman", level: 100 },
+  { skill: "JMeter", level: 100 },
   { skill: "Google Cloud Platform", level: 75 },
   { skill: "Selenium", level: 100 },
   { skill: "Appium", level: 100 },
   { skill: "AI", level: 90 },
-
-
 ];
 
 const Skills = () => {
+  const sortedSkills = [...skills].sort((a, b) => a.skill.localeCompare(b.skill));
+
   return (
     <div className={styles.title}>
       <h2>~ My Skills Level ~</h2>
     
-    <div className={styles.skills_container}>
-      {skills.map((item, index) => (
-        <SkillLevel key={index} skill={item.skill} level={item.level} />
-      ))}
-    </div>
+      <div className={styles.skills_container}>
+        {sortedSkills.map((item, index) => (
+          <SkillLevel key={index} skill={item.skill} level={item.level} />
+        ))}
+      </div>
     </div>
   );
 };
