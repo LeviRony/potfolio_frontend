@@ -47,7 +47,6 @@ export default function Navbar() {
     if (!weatherData) {
         return <div>Loading weather...</div>;
     }
-
     return (
         <nav className={styles.navbar}>
             <div className={styles.left}>
@@ -56,11 +55,10 @@ export default function Navbar() {
                 <Link href="/projects" className={styles.link}>Projects</Link>
                 <Link href="/reviews" className={styles.link}>Reviews</Link>
                 <Link href="/contact" className={styles.link}>Contact Me</Link>
-                <Link href="/Weather" className={styles.link}>Weather</Link>
             </div>
             <div className={styles.right}>
                 <a>{weatherData.location.name} {weatherData.current.temp_c}°C</a>
-              
+
             </div>
         </nav>
     );
