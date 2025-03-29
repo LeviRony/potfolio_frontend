@@ -6,37 +6,41 @@ export default function LiveBackground() {
     const [timeOfDay, setTimeOfDay] = useState("morning"); 
 
     useEffect(() => {
-        const updateBackground = async () => {
-            try {
-                // Get user's location
-                if ("geolocation" in navigator) {
-                    navigator.geolocation.getCurrentPosition(async (position) => {
+        const updateBackground = () => {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(
+                    async (position) => {
                         const { latitude, longitude } = position.coords;
 
-                        // Fetch current time using TimeZone API
-                        const response = await fetch(
-                            `http://api.weatherapi.com/v1/current.json?key=5311018cb2814db8810195310252703&q=${lat},${lon}`
-                        );
-                        const data = await response.json();
+                        try {
+                            const response = await fetch(
+                                `https://api.weatherapi.com/v1/current.json?key=5311018cb2814db8810195310252703&q=${latitude},${longitude}`
+                            );
+                            const data = await response.json();
 
-                        const currentHour = new Date(data.formatted).getHours();
+                            if (data.location && data.location.localtime) {
+                                const currentHour = new Date(data.location.localtime).getHours();
 
-                        // Determine the time of day
-                        if (currentHour >= 6 && currentHour < 12) {
-                            setTimeOfDay("morning");
-                        } else if (currentHour >= 12 && currentHour < 18) {
-                            setTimeOfDay("afternoon");
-                        } else if (currentHour >= 18 && currentHour < 21) {
-                            setTimeOfDay("evening");
-                        } else {
-                            setTimeOfDay("night");
+                                if (currentHour >= 6 && currentHour < 12) {
+                                    setTimeOfDay("morning");
+                                } else if (currentHour >= 12 && currentHour < 18) {
+                                    setTimeOfDay("afternoon");
+                                } else if (currentHour >= 18 && currentHour < 21) {
+                                    setTimeOfDay("evening");
+                                } else {
+                                    setTimeOfDay("night");
+                                }
+                            }
+                        } catch (error) {
+                            console.error("Error fetching timezone:", error);
                         }
-                    });
-                } else {
-                    console.log("Geolocation is not supported.");
-                }
-            } catch (error) {
-                console.error("Error fetching timezone:", error);
+                    },
+                    (error) => {
+                        console.error("Geolocation error:", error);
+                    }
+                );
+            } else {
+                console.log("Geolocation is not supported.");
             }
         };
 
