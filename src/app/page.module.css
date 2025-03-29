@@ -3,7 +3,7 @@
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
-  --button-primary-hover: #383838;
+  --button-primary-hover: #060606;
   --button-secondary-hover: #f2f2f2;
 
   display: grid;
@@ -15,7 +15,7 @@
   font-family: var(--font-geist-sans);
   background-image: url('https://i.pinimg.com/736x/30/8f/2f/308f2fd627c36e007527bc50337f6c7b.jpg');
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 100%;
   background-position: right top;
   background-color: var(--geist-background);
   color: var(--geist-foreground);
@@ -44,12 +44,53 @@
   line-height: 1.4;
 }
 
-.icon {
-  color: #828181;
-  transition: transform 0.3s ease, color 0.3s ease;
-  
+.contact_icons {
+  display: flex;
+  justify-content: left;
+  gap: 0;
+  margin-top: 10px;
+  z-index: 1;
 }
 
+.FaPhone_icon {
+  color: #00bcd4;
+}
+
+.FaWhatsapp_icon {
+  color: #25D366;
+  /* WhatsApp green */
+}
+
+.FaLinkedin_icon {
+  color: #0073b1;
+  /* LinkedIn blue */
+}
+
+.FaGithub_icon {
+  color: #ededed;
+}
+
+.FaEnvelope_icon {
+  color: #ff5722;
+}
+
+
+.FaPhone_icon, .FaWhatsapp_icon, .FaLinkedin_icon, .FaGithub_icon, .FaEnvelope_icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.FaLinkedin_icon:hover,
+.FaEnvelope_icon:hover,
+.FaWhatsapp_icon:hover,
+.FaGithub_icon:hover,
+.FaPhone_icon:hover {
+  transform: scale(1.2);
+}
 
 
 @media (prefers-color-scheme: dark) {

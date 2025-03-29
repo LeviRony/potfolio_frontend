@@ -15,6 +15,7 @@ export default function Home() {
         <p>Feel free to reach out if you have any questions or want to collaborate on a project.</p>
         <p>Let's connect and create something amazing together!</p>
         <p>Check out my social media profiles:</p>
+
         <div className={styles.contact_icons}>
         {/* Phone */}
         <a
@@ -23,7 +24,7 @@ export default function Home() {
           rel="noopener noreferrer"
           aria-label="Contact via Phone"
         >
-          <FaPhone size={80} className={styles.icon} />
+          <FaPhone size={80} className={styles.FaPhone_icon} />
         </a>
         <a
           href="https://wa.me/972544273287"  //  WhatsApp link
@@ -31,7 +32,7 @@ export default function Home() {
           rel="noopener noreferrer"
           aria-label="Contact via WhatsApp"
         >
-          <FaWhatsapp size={80} className={styles.icon} />
+          <FaWhatsapp size={80} className={styles.FaWhatsapp_icon} />
         </a>
         <a
           href="https://www.linkedin.com/in/rony-levi/"  // LinkedIn profile
@@ -39,7 +40,7 @@ export default function Home() {
           rel="noopener noreferrer"
           aria-label="Contact via LinkedIn"
         >
-          <FaLinkedin size={80} className={styles.icon} />
+          <FaLinkedin size={80} className={styles.FaLinkedin_icon} />
         </a>
         <a
           href="https://github.com/LeviRony"  // GitHub profile
@@ -47,7 +48,7 @@ export default function Home() {
           rel="noopener noreferrer"
           aria-label="Visit my GitHub"
         >
-          <FaGithub size={80} className={styles.icon} />
+          <FaGithub size={80} className={styles.FaGithub_icon} />
         </a>
         <a
           href="mailto:ronylevi99@gmail.com"  // email address
@@ -55,10 +56,9 @@ export default function Home() {
           rel="noopener noreferrer"
           aria-label="Contact via Email"
         >
-          <FaEnvelope size={80} className={styles.icon} />
+          <FaEnvelope size={80} className={styles.FaEnvelope_icon} />
         </a>
       </div>
-
 
 
 
