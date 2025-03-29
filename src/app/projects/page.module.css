@@ -47,9 +47,11 @@
   }
   
   .image {
-    width: 100%;
+    width: 650px;
+    max-width: 120%;
     height: 250px;
-    object-fit: cover;
+    object-fit:initial ;
+    border-radius: 10px;
     transition: transform 0.3s;
   }
   
@@ -62,7 +64,6 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
     padding: 10px;

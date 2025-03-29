@@ -24,7 +24,7 @@ export default function Home() {
       </div>
 
       <div id="bio" className={styles.bio}>
-        <img src="https://media.licdn.com/dms/image/v2/C5103AQEH8yhUHUEK5A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516556980660?e=1748476800&v=beta&t=yy6ygEp2SeEXav7R2mlc_Ny1CIxE30E0a7A4mpRjZ20" alt="Rony Levi" className={styles.img} />
+        <img src="/images/RonyL.jpeg" alt="Rony Levi" className={styles.img} />
         <h2>About Me</h2>
         <p>I started my career as a QA engineer, tested Web, Mobile, and Saas applications, for the last few years, I
           have built and led QA departments.</p>

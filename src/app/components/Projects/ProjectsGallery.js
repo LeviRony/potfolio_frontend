@@ -4,7 +4,7 @@ import Link from "next/link"; // Import Link for navigation
 import styles from "../../projects/page.module.css"; 
 
 const projects = [
-    { id: 1, title: "Weather App", category: "Web", image: "/weather-app.jpg", href: "/projects/Weather" },
+    { id: 1, title: "Weather App", category: "Web", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEGZiZqMO6TK52gDcxWUhmBml5d_FGQ0YEMnCU33kz9n5V15B_JDvJLqIdIn5uZSQB9_Q&usqp=CAU", href: "/projects/Weather" },
     { id: 2, title: "Online Shop", category: "Web", image: "/ecommerce.jpg", href: "/projects/Shop" },
 ];
 

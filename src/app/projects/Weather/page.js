@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./page.module.css";
+import LiveBackground from "../../components/Weather/LiveBackground";
 
 const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -46,14 +47,14 @@ const Weather = () => {
   if (!weatherData) {
     return <div>Loading weather...</div>;
   }
-
   return (
     <div>
+      <LiveBackground />
       <h2 className={styles.weather_container_h2}>Weather Information</h2>
       <div>
         <h3 className={styles.weather_container_p}><strong>Current Location:</strong>{weatherData.location.name}</h3>
         <p className={styles.weather_container_p}><strong>Region:</strong>{weatherData.location.region}, {weatherData.location.country}</p>
-        <p className={styles.weather_container_p}><strong>Local Time:</strong> {weatherData.location.localtime}°C</p>
+        <p className={styles.weather_container_p}><strong>Local Time:</strong> {weatherData.location.localtime}</p>
         <p className={styles.weather_container_p}><strong>Temperature:</strong> {weatherData.current.temp_c}°C</p>
         <p className={styles.weather_container_p}><strong>Condition:</strong> {weatherData.current.condition.text}</p>
         <p className={styles.weather_container_p}><strong>Wind:</strong> {weatherData.current.wind_mph}</p>
