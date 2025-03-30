@@ -14,26 +14,10 @@ export default function Home() {
         <p>Explore my portfolio, learn more about me, or get in touch!</p>
         <p>Feel free to reach out if you have any questions or want to collaborate on a project.</p>
         <p>Let's connect and create something amazing together!</p>
+        <br></br>
         <p>Check out my social media profiles:</p>
 
         <div className={styles.contact_icons}>
-        {/* Phone */}
-        <a
-          href="tel:+972544273287" // phone number
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Contact via Phone"
-        >
-          <FaPhone size={80} className={styles.FaPhone_icon} />
-        </a>
-        <a
-          href="https://wa.me/972544273287"  //  WhatsApp link
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Contact via WhatsApp"
-        >
-          <FaWhatsapp size={80} className={styles.FaWhatsapp_icon} />
-        </a>
         <a
           href="https://www.linkedin.com/in/rony-levi/"  // LinkedIn profile
           target="_blank"
@@ -49,14 +33,6 @@ export default function Home() {
           aria-label="Visit my GitHub"
         >
           <FaGithub size={80} className={styles.FaGithub_icon} />
-        </a>
-        <a
-          href="mailto:ronylevi99@gmail.com"  // email address
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Contact via Email"
-        >
-          <FaEnvelope size={80} className={styles.FaEnvelope_icon} />
         </a>
       </div>
 

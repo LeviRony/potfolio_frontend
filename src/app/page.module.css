@@ -27,28 +27,44 @@
 .welcome_container {
   padding: 40px;
   margin-top: -2rem;
+  max-width: 60%;
   z-index: 1;
+  font-family: 'Monaco', sans-serif;
+
 }
+
+.welcome_container h1 {
+  font-size: 55px;
+}
+
+
 .welcome_container p {
   z-index: 1;
+  margin-top: 8px;
+  font-size: 28px;
+  line-height: 1.6;
+  
 }
+
 .img {
   z-index: -1;
+  margin-bottom: 2rem;
 }
 
 .bio {
-  margin-top: 30rem;
+  margin-top: 20em;
   font-size: 1.9rem;
   max-width: 75rem;
   padding: 80px;
   line-height: 1.4;
+  font-family: 'Monaco', cursive;
 }
 
 .contact_icons {
   display: flex;
   justify-content: left;
   gap: 0;
-  margin-top: 10px;
+  margin-top: 15px;
   z-index: 1;
 }
 
@@ -75,7 +91,11 @@
 }
 
 
-.FaPhone_icon, .FaWhatsapp_icon, .FaLinkedin_icon, .FaGithub_icon, .FaEnvelope_icon {
+.FaPhone_icon,
+.FaWhatsapp_icon,
+.FaLinkedin_icon,
+.FaGithub_icon,
+.FaEnvelope_icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -103,6 +123,7 @@
     --button-secondary-hover: #1a1a1a;
   }
 }
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
@@ -118,38 +139,5 @@
   .footer a:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .bio {
-    align-items: left;
-    text-align: left;
-    font-size: small;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
   }
 }
