@@ -8,7 +8,7 @@ export default function Home() {
 
     <div className={styles.page}>
       <div className={styles.welcome_container}>
-        <h1>Welcome to Rony Levi Website</h1>
+        <h1>Welcome to Rony Levi First Website</h1>
         <p>I'm <strong>Rony Levi</strong>, a passionate developer who loves creating stunning websites with
           HTML, CSS, React, Java and JavaScript.</p>
         <p>Explore my portfolio, learn more about me, or get in touch!</p>
