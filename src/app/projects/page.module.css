@@ -47,12 +47,10 @@
   }
   
   .image {
-    width: 650px;
-    max-width: 120%;
-    height: 250px;
-    object-fit:initial ;
+    width: 450px;
+    height: 150px;
+    object-fit: fill ;
     border-radius: 10px;
-    transition: transform 0.3s;
   }
   
   .card:hover .image {

@@ -1,10 +1,11 @@
 import React from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import styles from "../../skills/page.module.css";
 
 const SkillsNameLevel = ({ skillName, skillLevel }) => {
     return (
-        <div style={{ width: 100, margin: "10px" }}>
+        <div style={{ width: 100, margin: "10px" }} className={styles.rateCircle}>
             <CircularProgressbar
                 value={skillLevel}
                 text={`${skillLevel}%`}

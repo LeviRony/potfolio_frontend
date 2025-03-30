@@ -1,38 +1,62 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import SkillLevel from "../skills/SkillsLevel";  // Import SkillLevel component
+import SkillLevel from "../skills/SkillsLevel";  
 
 async function getSkills() {
-    const response = await fetch('http://localhost:3001/api/skills/');
-    const skills = await response.json();
-    return skills;
+    try {
+        const response = await fetch('http://localhost:3001/api/skills/');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const skills = await response.json();
+        return skills;
+    } catch (error) {
+        console.error("Error fetching skills:", error);
+        return []; // Return empty array on error
+    }
 }
 
 const SkillsList = () => {
     const [skills, setSkills] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
-            const skillsData = await getSkills();
-            console.log(skillsData);  // Log to inspect the structure of the data
-            setSkills(skillsData);
+            try {
+                const skillsData = await getSkills();
+                setSkills(skillsData);
+            } catch (error) {
+                setError("Failed to load skills");
+            } finally {
+                setLoading(false);
+            }
         };
 
         fetchData();
     }, []);
 
+    if (loading) {
+        return <p>Loading skills...</p>;
+    }
+
+    if (error) {
+        return <p>{error}</p>;
+    }
+
     return (
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-            {
-                skills.map((skill, index) => {
-                    return (
-                        <SkillLevel
-                            key={index}
-                            skillName={skill.skill_name}  // Pass skill_name correctly
-                            skillLevel={skill.level_rate || 0}  // Use fallback if level_rate is undefined
-                        />
-                    );
-                })
-            }
+            {skills.length === 0 ? (
+                <p>No skills available or error fetching skills.</p>
+            ) : (
+                skills.map((skill, index) => (
+                    <SkillLevel
+                        key={index}
+                        skillName={skill.skill_name}
+                        skillLevel={skill.skill_rating || 0} 
+                    />
+                ))
+            )}
         </div>
     );
 };

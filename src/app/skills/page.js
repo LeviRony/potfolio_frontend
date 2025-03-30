@@ -9,7 +9,6 @@ const Skills = () => {
         <div className={styles.title}>
             <h2>~ My Skills Level ~</h2>
             <div className={styles.skills_container}>
-                {/* Use SkillsList component to display the list of skills */}
                 <SkillsList />
             </div>
         </div>

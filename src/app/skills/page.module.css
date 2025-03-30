@@ -1,17 +1,15 @@
 .skills_container {
-  max-width: 75%;
+  max-width: 65.5%;
   margin: 20px auto;
   padding: 20px;
   background: #797565;
   border-radius: 8px;
   margin-top: 2%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive Grid */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   justify-items: center;
   border: 1px solid #efefef;
-  
-  /* Scrollbar Styling */
   scrollbar-width: thin;
   scrollbar-color: #797565 #efefef;
 }
@@ -31,4 +29,9 @@
   margin: 20px 0 25px;
   color: #efefef;
   font-weight: bold;
+  height: 5000%;
+}
+
+.rateCircle:hover {
+  transform: scale(1.3);
 }
