@@ -51,6 +51,7 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.left}>
                 <Link href="/" className={styles.link}>Home Page</Link>
+                <Link href="/aboutMe" className={styles.link}>About Me</Link>
                 <Link href="/skills" className={styles.link}>Skills</Link>
                 <Link href="/projects" className={styles.link}>Projects</Link>
                 <Link href="/reviews" className={styles.link}>Reviews</Link>

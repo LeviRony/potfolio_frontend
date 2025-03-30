@@ -26,45 +26,31 @@
 
 .welcome_container {
   padding: 40px;
-  margin-top: -2rem;
+  margin-top: 5rem;
   max-width: 60%;
   z-index: 1;
   font-family: 'Monaco', sans-serif;
-
 }
 
 .welcome_container h1 {
   font-size: 55px;
+  margin-bottom: 50px;
 }
 
 
 .welcome_container p {
   z-index: 1;
-  margin-top: 8px;
+  margin-top: 15px;
   font-size: 28px;
   line-height: 1.6;
-  
-}
-
-.img {
-  z-index: -1;
-  margin-bottom: 2rem;
-}
-
-.bio {
-  margin-top: 20em;
-  font-size: 1.9rem;
-  max-width: 75rem;
-  padding: 80px;
-  line-height: 1.4;
-  font-family: 'Monaco', cursive;
 }
 
 .contact_icons {
   display: flex;
   justify-content: left;
   gap: 0;
-  margin-top: 15px;
+  margin-top: -65px;
+  margin-left: 750px;
   z-index: 1;
 }
 
