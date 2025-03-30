@@ -1,17 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import styles from "../../projects/Weather/page.module.css"; 
+import styles from "../../projects/Weather/page.module.css";
 
 export default function LiveBackground() {
-    const [timeOfDay, setTimeOfDay] = useState("morning"); 
+    const [timeOfDay, setTimeOfDay] = useState("morning"); // Default morning
 
     useEffect(() => {
-        const updateBackground = () => {
+        const updateBackground = async () => {
             if ("geolocation" in navigator) {
                 navigator.geolocation.getCurrentPosition(
                     async (position) => {
                         const { latitude, longitude } = position.coords;
-
                         try {
                             const response = await fetch(
                                 `https://api.weatherapi.com/v1/current.json?key=5311018cb2814db8810195310252703&q=${latitude},${longitude}`
@@ -33,14 +32,16 @@ export default function LiveBackground() {
                             }
                         } catch (error) {
                             console.error("Error fetching timezone:", error);
+                            setTimeOfDay("morning"); // Default fallback
                         }
                     },
                     (error) => {
                         console.error("Geolocation error:", error);
+                        setTimeOfDay("morning"); // Default fallback
                     }
                 );
             } else {
-                console.log("Geolocation is not supported.");
+                setTimeOfDay("morning"); // Default fallback
             }
         };
 
@@ -48,7 +49,7 @@ export default function LiveBackground() {
     }, []);
 
     return (
-        <div className={`${styles.background} ${styles[timeOfDay]}`}>
+        <div className={`${styles.background} ${styles[timeOfDay] || ''}`}>
         </div>
     );
 }
