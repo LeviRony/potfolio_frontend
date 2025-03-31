@@ -1,9 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Before started
-You will need to install all relevant packages for this project. by 
->_Terminal
-$ `npm install` to install dependencies.
+> [!CAUTION]
+> You'll need to install all relevant packages for this project.
+> ```$ npm install``` to install dependencies.
+
+
+ * Optional in case you're using MongoDB or PostgreSQL DBs 
+  > [!NOTE]
+  > Create '.env' file
+> ``` POSTGRESQL='http://localhost:3001/ ```
+
 ## Getting Started
 
 First, run the development server:
