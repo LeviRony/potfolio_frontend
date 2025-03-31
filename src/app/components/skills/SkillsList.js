@@ -12,7 +12,7 @@ async function getSkills() {
         return skills;
     } catch (error) {
         console.error("Error fetching skills:", error);
-        return []; // Return empty array on error
+        return []; 
     }
 }
 
