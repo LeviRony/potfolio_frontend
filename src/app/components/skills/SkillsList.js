@@ -4,7 +4,7 @@ import SkillLevel from "../skills/SkillsLevel";
 
 async function getSkills() {
     try {
-        const response = await fetch('http://localhost:3001/api/skills/');
+        const response = await fetch(POSTGRESQL + 'api/skills/');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

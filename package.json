@@ -2,6 +2,7 @@
   "name": "potfolio_frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://LeviRony.github.io/my-github-portfolio",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -20,5 +21,8 @@
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
