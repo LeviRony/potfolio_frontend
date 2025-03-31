@@ -71,7 +71,7 @@
   
   .timeline_event {
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     position: relative;
     margin-bottom: 20px;
   }

@@ -14,7 +14,10 @@ export default function aboutMe() {
             reports, and managing a talented team of over 50
             professionals worldwide. </p>
           <p>I have a lot of experience with CD/CD processes, work methods, management skills.</p>
-
+          <br></br>       
+          <br></br>
+          <br></br>
+          <br></br>
           <div className="bg-gray-100 min-h-screen flex items-center justify-center">
             <Timeline />
           </div>
