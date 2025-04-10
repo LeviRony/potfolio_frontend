@@ -47,9 +47,3 @@ jobs:
 
       - name: Set Environment Variables
         run: echo "NEXT_PUBLIC_WEATHER_API_KEY=${{ secrets.WEATHER_APIKEY }}" >> $GITHUB_ENV
-
-      - name: Build App
-        run: npm run build
-
-      - name: Deploy
-        run: npm run deploy
