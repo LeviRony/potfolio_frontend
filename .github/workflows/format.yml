@@ -22,7 +22,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-##  If you want to check the formatting without making changes, uncomment the following line
+
+      ##  If you want to check the formatting without making changes, uncomment the following line
       #- name: Run Prettier
       #  run: npx prettier --check .
 
@@ -43,9 +44,6 @@ jobs:
           git add .
           git commit -m "chore: auto-format code" || echo "No changes to commit"
           git push
-
-      - name: Install Dependencies
-        run: npm install
 
       - name: Set Environment Variables
         run: echo "NEXT_PUBLIC_WEATHER_API_KEY=${{ secrets.WEATHER_APIKEY }}" >> $GITHUB_ENV
