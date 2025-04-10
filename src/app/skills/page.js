@@ -33,7 +33,7 @@ const skills = [
   { skill: "Browser Stack", level: 90 },
   { skill: "Slack", level: 100 },
   { skill: "Auth0", level: 85 },
-      { skill: "ADB", level: 85 },
+  { skill: "ADB", level: 85 },
   { skill: "Postman", level: 100 },
   { skill: "JMeter", level: 100 },
   { skill: "Google Cloud Platform", level: 75 },
