@@ -38,3 +38,15 @@ jobs:
           git add .
           git commit -m "chore: auto-format code" || echo "No changes to commit"
           git push
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Set Environment Variables
+        run: echo "NEXT_PUBLIC_WEATHER_API_KEY=${{ secrets.WEATHER_APIKEY }}" >> $GITHUB_ENV
+
+      - name: Build App
+        run: npm run build
+
+      - name: Deploy
+        run: npm run deploy
