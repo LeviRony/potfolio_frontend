@@ -13,11 +13,13 @@ const Weather = () => {
   const fetchWeather = async (lat, lon) => {
     try {
       const response = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=5311018cb2814db8810195310252703&q=${lat},${lon}`
+        `http://api.weatherapi.com/v1/current.json?key=5311018cb2814db8810195310252703&q=${lat},${lon}`,
       );
       setWeatherData(response.data);
     } catch (err) {
-      setError(err.response?.data?.error?.message || "Unable to fetch weather data.");
+      setError(
+        err.response?.data?.error?.message || "Unable to fetch weather data.",
+      );
       console.error("Weather API Error:", err);
     }
   };
@@ -34,7 +36,7 @@ const Weather = () => {
           (err) => {
             setError("Location permission denied or error.");
             console.error(err);
-          }
+          },
         );
       } else {
         setError("Geolocation is not supported by this browser.");
@@ -69,7 +71,9 @@ const Weather = () => {
       <h2 className={styles.weather_container_h2}>Weather Information</h2>
       <div>
         <h3 className={styles.weather_container_p}>
-          <strong className={styles.weather_container_strong}>Current Location:</strong>
+          <strong className={styles.weather_container_strong}>
+            Current Location:
+          </strong>
           {weatherData.location.name}
         </h3>
         <p className={styles.weather_container_p}>
@@ -77,15 +81,21 @@ const Weather = () => {
           {weatherData.location.region}, {weatherData.location.country}
         </p>
         <p className={styles.weather_container_p}>
-          <strong className={styles.weather_container_strong}>Local Time:</strong>
+          <strong className={styles.weather_container_strong}>
+            Local Time:
+          </strong>
           {weatherData.location.localtime}
         </p>
         <p className={styles.weather_container_p}>
-          <strong className={styles.weather_container_strong}>Temperature:</strong>
+          <strong className={styles.weather_container_strong}>
+            Temperature:
+          </strong>
           {weatherData.current.temp_c}°C
         </p>
         <p className={styles.weather_container_p}>
-          <strong className={styles.weather_container_strong}>Condition:</strong>
+          <strong className={styles.weather_container_strong}>
+            Condition:
+          </strong>
           {weatherData.current.condition.text}
         </p>
         <p className={styles.weather_container_p}>
@@ -101,7 +111,9 @@ const Weather = () => {
           {weatherData.current.humidity}
         </p>
         <p className={styles.weather_container_p}>
-          <strong className={styles.weather_container_strong}>Feels Like:</strong>
+          <strong className={styles.weather_container_strong}>
+            Feels Like:
+          </strong>
           {weatherData.current.feelslike_c}°C
         </p>
         <p className={styles.weather_container_p}>
@@ -109,7 +121,9 @@ const Weather = () => {
           {weatherData.current.pressure_mb} mb
         </p>
         <p className={styles.weather_container_p}>
-          <strong className={styles.weather_container_strong}>Visibility:</strong>
+          <strong className={styles.weather_container_strong}>
+            Visibility:
+          </strong>
           {weatherData.current.vis_km} km
         </p>
         <p className={styles.weather_container_p}>
@@ -117,15 +131,21 @@ const Weather = () => {
           {weatherData.current.cloud}
         </p>
         <p className={styles.weather_container_p}>
-          <strong className={styles.weather_container_strong}>Wind Degree:</strong>
+          <strong className={styles.weather_container_strong}>
+            Wind Degree:
+          </strong>
           {weatherData.current.wind_degree}
         </p>
         <p className={styles.weather_container_p}>
-          <strong className={styles.weather_container_strong}>Wind Direction:</strong>
+          <strong className={styles.weather_container_strong}>
+            Wind Direction:
+          </strong>
           {weatherData.current.wind_dir}
         </p>
         <p className={styles.weather_container_p}>
-          <strong className={styles.weather_container_strong}>Last Updated:</strong>
+          <strong className={styles.weather_container_strong}>
+            Last Updated:
+          </strong>
           {weatherData.current.last_updated}
         </p>
         <img

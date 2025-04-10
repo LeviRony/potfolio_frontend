@@ -13,7 +13,7 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
-  background-image: url('https://i.pinimg.com/736x/30/8f/2f/308f2fd627c36e007527bc50337f6c7b.jpg');
+  background-image: url("https://i.pinimg.com/736x/30/8f/2f/308f2fd627c36e007527bc50337f6c7b.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: right top;
@@ -29,14 +29,13 @@
   margin-top: 5rem;
   max-width: 60%;
   z-index: 1;
-  font-family: 'Monaco', sans-serif;
+  font-family: "Monaco", sans-serif;
 }
 
 .welcome_container h1 {
   font-size: 55px;
   margin-bottom: 50px;
 }
-
 
 .welcome_container p {
   z-index: 1;
@@ -59,7 +58,7 @@
 }
 
 .FaWhatsapp_icon {
-  color: #25D366;
+  color: #25d366;
   /* WhatsApp green */
 }
 
@@ -76,7 +75,6 @@
   color: #ff5722;
 }
 
-
 .FaPhone_icon,
 .FaWhatsapp_icon,
 .FaLinkedin_icon,
@@ -87,7 +85,9 @@
   justify-content: center;
   padding: 15px;
   border-radius: 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .FaLinkedin_icon:hover,
@@ -97,7 +97,6 @@
 .FaPhone_icon:hover {
   transform: scale(1.2);
 }
-
 
 @media (prefers-color-scheme: dark) {
   .page {

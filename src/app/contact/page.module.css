@@ -41,7 +41,7 @@
 }
 
 .FaWhatsapp_icon {
-  color: #25D366;
+  color: #25d366;
   /* WhatsApp green */
 }
 
@@ -58,15 +58,20 @@
   color: #ff5722;
 }
 
-
-.FaPhone_icon, .FaWhatsapp_icon, .FaLinkedin_icon, .FaGithub_icon, .FaEnvelope_icon {
+.FaPhone_icon,
+.FaWhatsapp_icon,
+.FaLinkedin_icon,
+.FaGithub_icon,
+.FaEnvelope_icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   border-radius: 10px;
   background-color: rgba(14, 13, 13, 0.392);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .FaLinkedin_icon:hover,

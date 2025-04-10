@@ -1,49 +1,48 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #797565;
-    padding: 16px 32px;
-    color: white;
-    font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #797565;
+  padding: 16px 32px;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
 /* Left section  */
 .left {
-    font-size: 1.2rem;
-    display: flex;
-    gap: 24px;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 24px;
 }
 
 /* Right section */
 .right {
-    display: flex;
-    gap: 24px;
-    font-size: 1.2rem;
-
+  display: flex;
+  gap: 24px;
+  font-size: 1.2rem;
 }
 
 /* Styling the links */
 .link {
-    color: white;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .link:hover {
-    color: #0a0a0a;
+  color: #0a0a0a;
 }
 
 /* Main content area */
 .mainContent {
-    padding: 20px;
-    min-height: calc(100vh - 64px);
-    /* Adjust height to account for the navbar */
+  padding: 20px;
+  min-height: calc(100vh - 64px);
+  /* Adjust height to account for the navbar */
 }
 
 .link {
-    color: white;
-    margin: 0 15px;
-    font-size: 18px;
-    font-weight: bold;
+  color: white;
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
 }

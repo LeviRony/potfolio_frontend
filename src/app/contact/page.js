@@ -1,5 +1,11 @@
 import React from "react";
-import { FaWhatsapp, FaLinkedin, FaPhone, FaGithub, FaEnvelope } from 'react-icons/fa';
+import {
+  FaWhatsapp,
+  FaLinkedin,
+  FaPhone,
+  FaGithub,
+  FaEnvelope,
+} from "react-icons/fa";
 import styles from "./page.module.css";
 
 const ContactMe = () => {
@@ -21,7 +27,7 @@ const ContactMe = () => {
           <FaPhone size={80} className={styles.FaPhone_icon} />
         </a>
         <a
-          href="https://wa.me/972544273287"  //  WhatsApp link
+          href="https://wa.me/972544273287" //  WhatsApp link
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contact via WhatsApp"
@@ -29,7 +35,7 @@ const ContactMe = () => {
           <FaWhatsapp size={80} className={styles.FaWhatsapp_icon} />
         </a>
         <a
-          href="https://www.linkedin.com/in/rony-levi/"  // LinkedIn profile
+          href="https://www.linkedin.com/in/rony-levi/" // LinkedIn profile
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contact via LinkedIn"
@@ -37,7 +43,7 @@ const ContactMe = () => {
           <FaLinkedin size={80} className={styles.FaLinkedin_icon} />
         </a>
         <a
-          href="https://github.com/LeviRony"  // GitHub profile
+          href="https://github.com/LeviRony" // GitHub profile
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit my GitHub"
@@ -45,7 +51,7 @@ const ContactMe = () => {
           <FaGithub size={80} className={styles.FaGithub_icon} />
         </a>
         <a
-          href="mailto:ronylevi99@gmail.com"  // email address
+          href="mailto:ronylevi99@gmail.com" // email address
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contact via Email"
@@ -58,7 +64,3 @@ const ContactMe = () => {
 };
 
 export default ContactMe;
-
-
-
-

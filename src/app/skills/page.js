@@ -2,7 +2,7 @@
 import React from "react";
 import "react-circular-progressbar/dist/styles.css";
 import SkillLevel from "../components/skills/SkillsLevel.js";
-import styles from './page.module.css';
+import styles from "./page.module.css";
 
 const skills = [
   { skill: "JavaScript", level: 95 },
@@ -44,12 +44,14 @@ const skills = [
 ];
 
 const Skills = () => {
-  const sortedSkills = [...skills].sort((a, b) => a.skill.localeCompare(b.skill));
+  const sortedSkills = [...skills].sort((a, b) =>
+    a.skill.localeCompare(b.skill),
+  );
 
   return (
     <div className={styles.title}>
       <h2>~ My Skills Level ~</h2>
-    
+
       <div className={styles.skills_container}>
         {sortedSkills.map((item, index) => (
           <SkillLevel key={index} skill={item.skill} level={item.level} />
