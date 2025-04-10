@@ -27,11 +27,11 @@ jobs:
       #  run: npx prettier --check .
 
       - name: Run Prettier and fix
-        run: npx prettier --write .
+        run: npx prettier --write . '!.github/workflows/**'
 
       - name: Commit and push changes
         env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ secrets.ACTION_TOKEN }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
