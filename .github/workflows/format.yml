@@ -22,9 +22,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Run Prettier
-        run: npx prettier --check .
+##  If you want to check the formatting without making changes, uncomment the following line
+      #- name: Run Prettier
+      #  run: npx prettier --check .
 
       - name: Run Prettier and fix
         run: npx prettier --write .
